@@ -1,21 +1,22 @@
 body {
-    background: #141E30;
+    background-image: url(../img/lined_paper/lined_paper.png);
+}
+
+header {
+    background: #1F1C2C;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #141E30, #243B55);
+    background: -webkit-linear-gradient(to left, #1F1C2C, #928DAB);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #141E30, #243B55);
+    background: linear-gradient(to left, #1F1C2C, #928DAB);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .container {
-    background-color: white;
-    border: grey 1px solid;
-    border-radius: 50%;
+    width: 340px;
     margin: auto;
     left: 50%;
     position: absolute;
     top: 50%;
-    width: 680px;
     /*
     *  Where the magic happens
     *  Centering method from CSS Tricks
@@ -38,10 +39,53 @@ h1 {
 }
 
 a,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Josefin Slab', serif;
+p {
+    font-family: 'Overpass Mono', monospace;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
