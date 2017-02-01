@@ -1,18 +1,38 @@
 body {
     background-image: url(../img/lined_paper/lined_paper.png);
+    font-family: 'Overpass Mono', monospace;
 }
 
-header {
-    background: #1F1C2C;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #1F1C2C, #928DAB);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #1F1C2C, #928DAB);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+img {
+    height: 150px;
 }
+
+h1 {
+    color: white;
+    font-family: 'Rock Salt', cursive;
+    font-size: 64px;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+input[type="text"] {
+    padding-right: 40px;
+}
+
+button[type="submit"] {
+    margin-left: -40px;
+}
+
+
+/*==============================================================*/
+
+
+/*Vertical align for container*/
 
 .container {
-    width: 340px;
+    width: 480px;
     margin: auto;
     left: 50%;
     position: absolute;
@@ -28,24 +48,8 @@ header {
     -ms-transform: perspective(1px) translate(-50%, -50%);
 }
 
-img {
-    height: 150px;
-}
 
-h1 {
-    color: white;
-    font-family: 'Rock Salt', cursive;
-    font-size: 64px;
-}
-
-a,
-p {
-    font-family: 'Overpass Mono', monospace;
-}
-
-a:hover {
-    cursor: pointer;
-}
+/*Blinking cursor for typed.js*/
 
 .typed-cursor {
     opacity: 1;
