@@ -10,29 +10,30 @@ $(document).on('click', '#submit-button', function(event) {
     } else {
         console.log(searchTerm);
         $('#search-form')[0].reset();
-        var resultDiv = $('div');
-        resultDiv.addClass('result-div');
-        resultDiv.text(searchTerm);
-        $('#results-div').append(resultDiv);
+
+        var queryUrl = "https://en.wikipedia.org/w/api.php?action=query" +
+            "&generator=search" +
+            "&format=json&gsrsearch=" + searchTerm + "&callback=?";
+        $.ajax({
+            method: "GET",
+            url: queryUrl,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function(data) {
+                console.log(data.query.pages);
+                var pages = data.query.pages;
+                for (var key in pages) {
+                    var keyLinkDiv = $('<div>');
+                    keyLinkDiv.addClass('row');
+                    var keyLink = $('<a>');
+                    keyLink.text('http://en.wikipedia.org/?curid=' + key)
+                    keyLink.attr('href', 'http://en.wikipedia.org/?curid=' + key);
+                    keyLink.attr('target', '_blank');
+                    keyLinkDiv.append(keyLink);
+                    $('#results-div').append(keyLinkDiv);
+                }
+            },
+            error: function(errorMessage) {}
+        });
     }
 });
-
-// var queryUrl = 'https://en.wikipedia.org/w/api.php?' + 'format=json' + '&action=query' + '&generator=search' +
-//     '&prop=pageimages|extracts' + '&titles=cats';
-
-// $.ajax({
-//     url: queryUrl,
-//     method: 'get',
-//     success: function(response) {
-//         console.log(response);
-//     }
-// });
-
-// $.ajax({
-//     url: '//en.wikipedia.org/w/api.php',
-//     data: { action: 'query', list: 'search', srsearch: 'Richard Feynman', format: 'json' },
-//     dataType: 'jsonp',
-//     success: function(x) {
-//         console.log('title', x.query.search[0].title);
-//     }
-// });
