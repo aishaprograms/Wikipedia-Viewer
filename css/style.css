@@ -3,10 +3,6 @@ body {
     font-family: 'Overpass Mono', monospace;
 }
 
-img {
-    height: 150px;
-}
-
 h1 {
     color: white;
     font-family: 'Rock Salt', cursive;
@@ -17,12 +13,28 @@ a:hover {
     cursor: pointer;
 }
 
+form {
+    margin: 10px;
+}
+
 input[type="text"] {
     padding-right: 40px;
 }
 
 button[type="submit"] {
     margin-left: -40px;
+}
+
+.search {
+    margin: 10px;
+    padding: 10px;
+}
+
+.result {
+    background-color: white;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
 }
 
 

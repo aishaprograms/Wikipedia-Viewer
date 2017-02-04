@@ -24,20 +24,23 @@
 
 <body>
     <div class="container">
-        <div class="row" id="typed-strings">
-            <p><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Click here for a random article</a>
-                <br> OR
-                <br>
-                <a id="search-button">Click here to search Wikipedia</a></p>
-        </div>
-        <span id="typed"></span>
-        <form class="form-inline" id="search-form" style="display: none">
-            <div class="form-group">
-                <input type="text" class="form-control" id="search-term">
-                <button type="submit" class="btn btn-link btn-xs" id="submit-button"><span class="glyphicon glyphicon-search"></span></button>
+        <div class="text-center search">
+            <div class="row" id="typed-strings">
+                <p><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Click here for a random article</a>
+                    <br> OR
+                    <br>
+                    <a id="search-button">Click here to search Wikipedia</a></p>
             </div>
-        </form>
-        <div class="wrapper" id="results-div">
+            <span id="typed"></span>
+            <form class="form-inline" id="search-form" style="display: none">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-term">
+                    <button type="submit" class="btn btn-link btn-xs" id="submit-button"><span class="glyphicon glyphicon-search"></span></button>
+                </div>
+            </form>
+        </div>
+        <!-- results for searches -->
+        <div class="row" id="results-div">
         </div>
     </div>
     <!-- /.modal -->
